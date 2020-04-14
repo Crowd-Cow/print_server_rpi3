@@ -31,7 +31,21 @@ config :vintage_net,
   regulatory_domain: "US",
   config: [
     {"eth0", %{type: VintageNet.Technology.Ethernet, ipv4: %{method: :dhcp}}},
-    {"wlan0", %{type: VintageNet.Technology.WiFi}}
+    {"wlan0", %{
+      type: VintageNet.Technology.WiFi,
+      vintage_net_wifi: %{
+        networks: [
+          %{ key_mgmt: :wpa_psk, ssid: "moo", psk: "2063065253" },
+          %{ key_mgmt: :wpa_psk, ssid: "ORBI49", psk: "sweetsocks600" },
+          %{ key_mgmt: :wpa_psk, ssid: "Verizon-MiFi7730L-OF86", psk: "2b1f14bf" },
+          %{ key_mgmt: :wpa_psk, ssid: "vandyk", psk: "password" },
+          %{ key_mgmt: :wpa_psk, ssid: "crowdcow", psk: "crowdcow123!" },
+          %{ key_mgmt: :wpa_psk, ssid: "CC - FC", psk: "crowdcowfc123!" },
+          %{ key_mgmt: :wpa_psk, ssid: "CC-Office", psk: "crowdcowoffice123!" },
+          %{ key_mgmt: :wpa_psk, ssid: "ORBI22", psk: "largeroad019" },
+        ]
+      }
+    }}
   ]
 
 # Configure the url for the connection to the test server phoenix channel socket.
