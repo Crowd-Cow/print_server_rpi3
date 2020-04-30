@@ -1,5 +1,8 @@
 # Raspberry Pi 3 Model B / B+
 
+JVD Note: I had to manually apply the patches at https://habr.com/en/post/498764/ to buildroot in order to get this to work.
+Would like to figure out how to automate that.
+
 [![CircleCI](https://circleci.com/gh/nerves-project/nerves_system_rpi3.svg?style=svg)](https://circleci.com/gh/nerves-project/nerves_system_rpi3)
 [![Hex version](https://img.shields.io/hexpm/v/nerves_system_rpi3.svg "Hex version")](https://hex.pm/packages/nerves_system_rpi3)
 
